@@ -10,8 +10,9 @@ import 'getx_and_get.dart';
 // выводы:
 // заменить Get.theme на context.theme (из Get) или Theme.of(context)
 // в CustomColorScheme нужно писать тернарки на каждый геттер (да и фиг с ним)
-// либо поставлять объект "вторым этажом"
+// либо делать абстрактный объект и поставлять унаследованные от него объекты "вторым этажом"
 // для отказа от GetX нужно переписать подачу themeMode через Bloc и поставку в виджеты через Theme.of(context)
+// цвета можно вынести в отдельную палитру - класс со статическими полями
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);

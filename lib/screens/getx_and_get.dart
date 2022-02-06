@@ -9,7 +9,6 @@ class GetxAndGet extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       backgroundColor: Get.theme.backgroundColor,
-      // backgroundColor: Theme.of(context).backgroundColor,
       body: Center(
         child: ElevatedButton(
           style: ButtonStyle(
