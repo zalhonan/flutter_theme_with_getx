@@ -20,6 +20,11 @@ extension CustomColorScheme on ColorScheme {
 
   Color get warningStatic => isLight ? const Color(0xFFFF8941) : const Color(0xFF7CDF8B);
 
+  /// для текста
+
+  Color get headline2Color =>
+      (Get.theme.brightness == Brightness.light) ? const Color(0xFFFEF0A7) : const Color(0xFFFF89FF);
+
   // Color get primaryExtraLight => const Color(0xFFF6F6F6);
 
   // Color get primaryText => const Color(0xFF333333);
