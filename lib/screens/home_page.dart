@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_theme_demo/screens/bloc_context_scheme.dart';
 import 'package:get_theme_demo/screens/getx_and_context.dart';
 import 'package:get_theme_demo/screens/getx_context_color_scheme.dart';
 import 'package:get_theme_demo/screens/getx_custom_color_scheme.dart';
@@ -70,6 +71,17 @@ class HomePage extends StatelessWidget {
               ),
               onTap: () {
                 Get.to(const GetxCustomStatic());
+              },
+            ),
+            GestureDetector(
+              child: const Card(
+                child: ListTile(
+                  title: Text("Bloc(Cubit) + Theme.of(context)"),
+                  trailing: Icon(Icons.arrow_forward_ios),
+                ),
+              ),
+              onTap: () {
+                Get.to(const BlocContextScheme());
               },
             ),
           ],
