@@ -1,16 +1,10 @@
 # get_theme_demo
 
-A new Flutter project.
+Вариант с GetX
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- выводы:
+- заменить Get.theme на context.theme (из Get) или Theme.of(context)
+- в CustomColorScheme нужно писать тернарки на каждый геттер (да и фиг с ним)
+- либо делать абстрактный объект и поставлять унаследованные от него объекты "вторым этажом"
+- для отказа от GetX нужно переписать подачу themeMode через Bloc и поставку в виджеты через Theme.of(context)
+- цвета можно вынести в отдельную палитру - класс со статическими полями
