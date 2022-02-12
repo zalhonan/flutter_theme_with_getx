@@ -10,17 +10,18 @@ class BlocContextAppText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final themeState = context.read<ThemeCubit>().state;
+    final theme = Theme.of(context);
 
     return Scaffold(
       appBar: AppBar(title: Text('Theme mode: ${themeState.currenThemeMode.name}')),
-      backgroundColor: Theme.of(context).colorScheme.success,
+      backgroundColor: theme.colorScheme.success,
       body: Center(
         child: ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Theme.of(context).colorScheme.warning),
+            backgroundColor: MaterialStateProperty.all(theme.colorScheme.warning),
           ),
           onPressed: context.read<ThemeCubit>().changeTheme,
-          child: Text('Press to change theme', style: Theme.of(context).textTheme.headline5BoldColored),
+          child: Text('Press to change theme', style: theme.textTheme.headline1),
         ),
       ),
     );

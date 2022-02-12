@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get_theme_demo/themes/custom_color_scheme.dart';
+import 'package:get_theme_demo/themes/palette.dart';
 
 import 'app_color_scheme.dart';
 import 'app_fonts.dart';
@@ -29,7 +31,7 @@ class AppTextTheme {
   static TextTheme appTextTheme = TextTheme(
     /// Figma name - 30r
     headline1: _w400.copyWith(
-      fontSize: 30.sp,
+      fontSize: 10.sp,
       height: _height130,
       letterSpacing: _letterSpacing,
     ),
@@ -124,6 +126,8 @@ extension CustomTextStyles on TextTheme {
 
   /// -------------
   /// 28m
-  TextStyle get headline5BoldColored => headline5Bold.merge(_w600);
-  //  copyWith(color: colorScheme.headline2Color);
+  TextStyle get headline1BoldColored => headline1Bold.merge(_w600);
+
+  // так не работает. Почему?
+  //  color: SchedulerBinding.instance!.window.platformBrightness == Brightness.dark
 }
