@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 import 'package:get_theme_demo/cubit/themecubit_cubit.dart';
 import 'package:get_theme_demo/themes/app_themes.dart';
 
@@ -32,8 +31,8 @@ class CoreApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, ThemeState>(
       builder: (context, state) {
-        return GetMaterialApp(
-          title: 'GetX Theme Demo',
+        return MaterialApp(
+          title: 'Bloc Theme Demo',
           theme: AppThemes.lightTheme,
           darkTheme: AppThemes.darkTheme,
           themeMode: state.currenThemeMode,

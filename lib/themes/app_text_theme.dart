@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:get_theme_demo/themes/custom_color_scheme.dart';
 
 import 'app_color_scheme.dart';
@@ -103,28 +102,28 @@ class AppTextTheme {
  */
 extension CustomTextStyles on TextTheme {
   /// Figma name - 30m
-  TextStyle get headline1Bold => Get.textTheme.headline1!.merge(_w600);
+  TextStyle get headline1Bold => headline1!.merge(_w600);
 
   /// 28m
-  TextStyle get headline2Bold => Get.textTheme.headline2!.merge(_w600);
+  TextStyle get headline2Bold => headline2!.merge(_w600);
 
   /// 24m
-  TextStyle get headline3Bold => Get.textTheme.headline3!.merge(_w600);
+  TextStyle get headline3Bold => headline3!.merge(_w600);
 
   /// 20m
-  TextStyle get headline4Bold => Get.textTheme.headline4!.merge(_w600);
+  TextStyle get headline4Bold => headline4!.merge(_w600);
 
   /// 16m
-  TextStyle get headline5Bold => Get.textTheme.headline5!.merge(_w600);
+  TextStyle get headline5Bold => headline5!.merge(_w600);
 
   /// 14m
-  TextStyle get headline6Bold => Get.textTheme.headline6!.merge(_w600);
+  TextStyle get headline6Bold => headline6!.merge(_w600);
 
   /// 12m
-  TextStyle get bodyText1Bold => Get.textTheme.bodyText1!.merge(_w600);
+  TextStyle get bodyText1Bold => bodyText1!.merge(_w600);
 
   /// -------------
   /// 28m
-  TextStyle get headline5BoldColored =>
-      Get.textTheme.headline5Bold.merge(_w600).copyWith(color: Get.theme.colorScheme.headline2Color);
+  TextStyle get headline5BoldColored => headline5Bold.merge(_w600);
+  //  copyWith(color: colorScheme.headline2Color);
 }
